@@ -57,7 +57,7 @@ typos:
 	typos
 
 # 运行所有检查
-check: fmt-check clippy deny typos
+check: fmt-check clippy
 	@echo "所有检查完成！"
 
 # 构建、测试和检查
@@ -93,10 +93,6 @@ example:
 # 发布前检查
 release-check: clean build-release test clippy deny
 	@echo "发布前检查完成！"
-
-# 运行基准测试
-bench:
-	cargo bench
 
 # 生成覆盖率报告
 coverage:

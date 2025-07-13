@@ -61,4 +61,4 @@ mod tests {
         assert_eq!(analyze_value("hello"), "中等字符串");
         assert_eq!(analyze_value("very long string"), "长字符串");
     }
-} 
+}
