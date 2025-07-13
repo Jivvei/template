@@ -1,0 +1,25 @@
+# rustfmt 配置文件
+# 更多配置选项：https://rust-lang.github.io/rustfmt/
+
+# 代码风格
+edition = "2024"
+max_width = 100
+tab_spaces = 4
+newline_style = "Unix"
+
+# 格式化选项
+format_code_in_doc_comments = true
+format_strings = true
+format_macro_matchers = true
+format_macro_bodies = true
+
+# 导入排序
+imports_granularity = "Module"
+group_imports = "StdExternalCrate"
+
+# 其他选项
+use_small_heuristics = "Default"
+merge_derives = true
+use_try_shorthand = true
+use_field_init_shorthand = true
+force_explicit_abi = true 

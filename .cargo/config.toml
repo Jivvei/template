@@ -1,0 +1,28 @@
+[build]
+# 设置目标目录
+target-dir = "target"
+
+[target.x86_64-unknown-linux-gnu]
+# Linux 目标配置
+linker = "clang"
+
+[target.x86_64-apple-darwin]
+# macOS 目标配置
+linker = "clang"
+
+[target.x86_64-pc-windows-msvc]
+# Windows 目标配置
+linker = "clang"
+
+[alias]
+# 常用命令别名
+b = "build"
+t = "test"
+c = "check"
+f = "fmt"
+r = "run"
+cl = "clippy"
+d = "doc"
+u = "update"
+clean = "clean"
+release = "build --release" 

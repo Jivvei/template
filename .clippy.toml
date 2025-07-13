@@ -1,0 +1,45 @@
+# clippy 配置文件
+# 更多配置选项：https://rust-lang.github.io/rust-clippy/master/
+
+# 性能相关
+[performance]
+# 建议使用 Box<dyn Error> 而不是 Box<Error + Send + Sync>
+boxed_local = "allow"
+# 允许使用 clone() 在适当的情况下
+clone_on_copy = "warn"
+# 允许使用 map_or_else
+map_unwrap_or = "warn"
+
+# 复杂性相关
+[complexity]
+# 允许复杂的函数
+cyclomatic_complexity_threshold = 15
+# 允许嵌套的 if 语句
+collapsible_if = "warn"
+
+# 风格相关
+[style]
+# 允许使用 #[allow(clippy::all)]
+allow_attributes_without_reason = "allow"
+# 允许使用 assert! 宏
+assertions_on_constants = "warn"
+# 允许使用 black_box
+blacklisted_name = "allow"
+
+# 正确性相关
+[correctness]
+# 允许使用 unwrap() 在适当的情况下
+unwrap_used = "warn"
+# 允许使用 expect() 在适当的情况下
+expect_used = "warn"
+# 允许使用 panic! 在适当的情况下
+panic = "warn"
+
+# 文档相关
+[documentation]
+# 允许缺少文档注释
+missing_docs = "warn"
+# 允许缺少错误文档
+missing_errors_doc = "warn"
+# 允许缺少 panic 文档
+missing_panics_doc = "warn" 
