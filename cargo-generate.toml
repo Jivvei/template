@@ -1,0 +1,10 @@
+[template]
+# 配置模板变量
+cargo_generate_version = ">=0.10.0"
+# 跳过处理 cliff.toml 文件，因为它包含与 cargo generate 冲突的语法
+exclude = ["cliff.toml"]
+
+[placeholders.gh-username]
+type = "string"
+prompt = "请输入您的 GitHub 用户名"
+regex = "^[a-zA-Z0-9-_]+$"
